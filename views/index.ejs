@@ -1,8 +1,63 @@
 <%- include('base-header') %>
+<%- include('navbar') %>
 
-<h1>Hello World</h1>
+<div id="slideshow" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+        <div class="item active"><img src="/images/banner_trex.jpg" alt=""></div>
+        <div class="item"><img src="/images/quality-affordable-fence.jpg" alt=""></div>
+        <div class="item"><img src="/images/fence5.jpg" alt=""></div>
+<!--         <div class="item"><img src="https://placem.at/place?w=1600&h=465&random=4" alt=""></div>
+        <div class="item"><img src="https://placem.at/place?w=1600&h=465&random=5" alt=""></div> -->
+    </div>
+    <div class="control-btn">
+        <a href="#slideshow" class="left carousel-control" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" aria-hiddden="true"></span></a>
+        <a href="#slideshow" class="right carousel-control" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hiddden="true"></span></a>
+    </div>
+    <ol class="carousel-indicators">
+        <li data-target="#slideshow" data-slide-to="0"></li>
+        <li data-target="#slideshow" data-slide-to="1"></li>
+        <li data-target="#slideshow" data-slide-to="2"></li>
+<!--         <li data-target="#slideshow" data-slide-to="3"></li>
+        <li data-target="#slideshow" data-slide-to="4"></li> -->
+    </ol>
+</div>
+<section class="container">
+  <div class="text-center">
+    <h1>Mission Statement</h1>
+    <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>   
+  </div>
+</section>
 
-<div class="">
+<section class="container">
+  <div class="row">
+    <div class="col-md-3 box">
+      <h1>Product One</h1>
+    </div>
+    <div class="col-md-3 box">
+      <h1>Product Two</h1>
+    </div>
+    <div class="col-md-3 box">
+      <h1>Product Three</h1>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="row">
+    <div class="col-md-3 box">
+      <h1>Product Four</h1>
+    </div>
+    <div class="col-md-3 box">
+      <h1>Product Five</h1>
+    </div>
+    <div class="col-md-3 box">
+      <h1>Product Six</h1>
+    </div>
+  </div>
+</section>
+
+
+<div class="form-bottom">
 	<div class="">
     <form action="/new-lead" method="post">
       <h4>Contact Us Today!</h4>
