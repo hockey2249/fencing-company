@@ -1,0 +1,20 @@
+<%- include('base-header') %>
+
+<section>
+	<form action="/login" id="login-form" method="post">
+	  <div>
+	      <label>Username:</label>
+	      <input type="text" class="username_style" id="username-field" name="username"/>
+	  </div>
+	  <div>
+	      <label>Password:</label>
+	      <input type="password" class="password_style" id="password-field" name="password"/>
+	  </div>
+	  <div>
+	  	<button type="submit">Login</button>
+	  </div>
+	</form>	
+</section>
+
+
+<%- include('base-footer') %>

@@ -5,3 +5,4 @@ mongoose.connect( process.env.MONGODB_URI ||
                   "mongodb://localhost:27017");
 
 module.exports.Lead = require("./lead.js");
+module.exports.User = require("./user.js");
