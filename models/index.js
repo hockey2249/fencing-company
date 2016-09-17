@@ -6,3 +6,4 @@ mongoose.connect( process.env.MONGODB_URI ||
 
 module.exports.Lead = require("./lead.js");
 module.exports.User = require("./user.js");
+module.exports.Review = require("./reviews.js");

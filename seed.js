@@ -23,9 +23,13 @@ db.User.remove({}, function(err, users){
           console.log('err');
         }else {
           console.log('User Created');
-          process.exit(0);
+          db.Review.remove({}, function(err, reviews){
+            console.log('Reviews removed');
+            process.exit(0);
+          });
         }
       }); 
     });
   }
 });
+

@@ -46,6 +46,15 @@ const passportConfig = require('./passport-config');
 const passport = passportConfig(app, db);
 
 /**********
+ * UTIL Function *
+ **********/
+
+function ensureAuthenticated(req, res, next) {
+  if (req.isAuthenticated()) { return next(); }
+  res.redirect('/login');
+}
+
+/**********
  * ROUTES *
  **********/
 
@@ -97,11 +106,7 @@ app.get('/login', (req, res) => {
 
 app.post('/login', passport.authenticate('local', {failWithError: true}),
   function(req, res, next) {
-  	var redirectUrl = '/user-portal';
-  	if(req.user && req.user.role === 'admin'){
-  		redirectUrl = '/blog-post';
-  	}
-  	res.send('Hey It Works!!');
+  	res.redirect('/admin');
   	// res.redirect('/route');
     // return res.json({ sucess: 'sucess', redirectUrl: redirectUrl});
   },
@@ -109,6 +114,65 @@ app.post('/login', passport.authenticate('local', {failWithError: true}),
     // return res.json(err);
     res.send('Wrong Password');
  });
+
+
+app.get('/admin', (req, res) => {
+	// TO DO uncomment this 
+	ensureAuthenticated(req, res, function(){
+		db.Review.find((err, reviews) =>{
+		if (err){
+      		return res.send(err);
+    	}
+    	return res.render('admin', {
+    		reviews: reviews
+    	});
+    });
+	});
+	
+});
+
+
+app.get('/reviews', (req, res) =>{
+	db.Review.find((err, reviews) =>{
+		if (err){
+      		res.send(err);
+    	}
+    	const approvedReviews = reviews.filter((review) =>{
+    		return review.approved;
+    	});
+    	res.render('reviews', {
+    		
+    		reviews: approvedReviews
+
+    	});
+	});
+});
+
+app.post('/reviews', (req, res) => {
+	const newReview = req.body;
+	newReview.date = new Date();
+	newReview.approved = false;
+	db.Review.create(newReview, (err, review) => {
+		if(err){
+			return res.send("Error " + err);
+		}
+		res.redirect('/reviews'); // use flash to notify user 
+
+	});
+});
+
+app.get('/approve-reviews/:id', function(req, res){
+	ensureAuthenticated(req, res, function(){
+		db.Review.findOne({
+			'_id': req.params.id
+		}, (err, review) =>{
+			if(err){
+				return res.send("Error " + err);
+			}
+		});		
+
+	});
+});
 
 /**********
  * SERVER *
