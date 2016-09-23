@@ -117,18 +117,45 @@ app.post('/login', passport.authenticate('local', {failWithError: true}),
 
 
 app.get('/admin', (req, res) => {
-	// TO DO uncomment this 
+	let allLeads; 
+	ensureAuthenticated(req, res, function(){
+		db.Lead.find((err, leads) =>{
+			if (err){
+	      		res.json(err);
+	    	}
+	    allLeads = leads;
+		});
+
+		db.Review.find((err, reviews) =>{
+		if (err){
+      		return res.send(err);
+    	}
+    	const unApprovedReviews = reviews.filter(review =>{
+    		return !review.approved;
+    	});
+    	return res.render('admin', {
+    		reviews: unApprovedReviews,
+    		leads: allLeads
+
+    	});
+    });
+	});
+});
+
+app.get('/admin/approved', (req, res) => {
 	ensureAuthenticated(req, res, function(){
 		db.Review.find((err, reviews) =>{
 		if (err){
       		return res.send(err);
     	}
-    	return res.render('admin', {
-    		reviews: reviews
+    	const approvedReviews = reviews.filter(review =>{
+    		return review.approved;
     	});
-    });
+    	return res.render('admin', {
+    		reviews: approvedReviews
+    	});
 	});
-	
+});
 });
 
 
@@ -163,16 +190,27 @@ app.post('/reviews', (req, res) => {
 
 app.get('/approve-reviews/:id', function(req, res){
 	ensureAuthenticated(req, res, function(){
-		db.Review.findOne({
-			'_id': req.params.id
-		}, (err, review) =>{
-			if(err){
-				return res.send("Error " + err);
-			}
-		});		
-
+	    db.Review.findOneAndUpdate({ _id: req.params.id }, { approved: true }, (err, review) => {
+	    	if (err){
+      			return res.json(err);
+    		}
+	    	return res.json(review);
+	    });
 	});
-});
+});	
+
+
+app.get('/unapprove-reviews/:id', function(req, res){
+	ensureAuthenticated(req, res, function(){
+	    db.Review.findOneAndUpdate({ _id: req.params.id }, { approved: false }, (err, review) => {
+	    	if (err){
+      			return res.json(err);
+    		}
+	    	return res.json(review);
+	    });
+	});
+});		   
+
 
 /**********
  * SERVER *
