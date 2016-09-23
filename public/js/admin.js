@@ -1,3 +1,5 @@
+"use strict";
+
 $(function(){
 
 $('.list-group').delegate('.approve-button', 'click', function(e) {
