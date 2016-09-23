@@ -90,6 +90,7 @@ app.post('/new-lead', (req, res) => {
 		    subject: newLead.firstName + ' ' + newLead.lastName,
         	firstName: newLead.firstName,
 		    lastName: newLead.lastName,
+		    hear: newLead.hear,
 		    phone: newLead.phone,
 		    email: newLead.email
 		}, function (err) {
@@ -213,6 +214,10 @@ app.get('/unapprove-reviews/:id', function(req, res){
 	});
 });		   
 
+app.get('/contact-us', (req, res) => {
+	res.render('contact-us');
+
+});
 
 /**********
  * SERVER *

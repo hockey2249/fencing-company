@@ -2,12 +2,10 @@
 <%- include('navbar') %>
 
 
-
-<div class="row reviews-style">
-<h1>Reviews</h1>
-  <div class="col-md-3">
-    <form action="/reviews" method="post">
-      <h4>Review Us Today!</h4>
+<div class="form-bottom contact-us">
+	<div class="">
+    <form action="/new-lead" method="post">
+      <h4>Contact Us Today!</h4>
       <div class="form-group">
         <label for="control-label">First Name</label>
         <input name="firstName" id="firstName" placeholder="First Name" class="form-control"  type="text">
@@ -17,31 +15,24 @@
         <input name="lastName" id="lastName" placeholder="Last Name" class="form-control"  type="text">
       </div>
       <div class="form-group">
-        <label for="formGroupExampleInput">Review</label>
-        <input name="review" id="review" placeholder="Review" class="form-control"  type="text">
+        <label for="formGroupExampleInput">Email Address</label>
+        <input name="email" id="email" placeholder="E-Mail Address" class="form-control"  type="text">
       </div>
       <div class="form-group">
-        <label for="formGroupExampleInput2">Score</label>
-        <select name="score">
-  			<option value="1">1</option> 
-  			<option value="2">2</option>
-  			<option value="3">3</option>
-  			<option value="4">4</option>
-  			<option value="5" selected>5</option>
-		</select>
+        <label for="formGroupExampleInput2">How did you hear about us?</label>
+        <input name="hear" id="hear" placeholder="Hear About Us" class="form-control"  type="text">
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">Phone Number</label>
+        <input name="phone" type="text" class="form-control" id="phoneNumberInput" placeholder="Phone Number">
+        <br>
        <div class="col-md-4 button-form">
         <button type="submit" id="contactSubmit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
       </div>
       </div>
     </form>
   </div>
-  <div class="col-md-8 list-group">
-    <% reviews.forEach((review) => { %>
-    <% include ./partials/review %>
-    <% }) %>
-  </div>
 </div>
 
 
 <%- include('base-footer') %>
-

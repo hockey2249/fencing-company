@@ -5,6 +5,7 @@ const LeadSchema = new Schema({
   	firstName: String,
   	lastName: String,
   	email: String,
+  	hear: String,
   	phone: String
 });
 

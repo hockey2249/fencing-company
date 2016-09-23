@@ -1,9 +1,29 @@
+footer{
+  height: 30em;
+}
+
+.row{
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.reviews-style{
+  margin-top: 150px;
+}
+
 .form-bottom{
   border-style: dotted;
   width: 80%;
   margin: auto;
 }
 
+.contact-us{
+  margin-top: 250px; 
+}
+.login{
+  margin-top: 234px;
+  margin-bottom: 400px;
+}
+}
 /**********
  * Boxes
  **********/
@@ -70,7 +90,7 @@ footer{
  .navbar-nav{
   text-align: center;
   background-color: rgb(204,129,65);
-  width: 100%;
+  width: 28em;
  }
 
 
