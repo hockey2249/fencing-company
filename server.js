@@ -4,9 +4,9 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const mailer = require('express-mailer');
-const secrets = require('./secrets');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
+require('dotenv').config();
 
 /**********
  * MIDDLEWARE *
@@ -25,8 +25,8 @@ mailer.extend(app, {
   port: 465, 
   transportMethod: 'SMTP', 
   auth: {
-    user: secrets.FC_EMAIL_USERNAME,
-    pass: secrets.FC_EMAIL_PASSWORD
+    user: process.env.FC_EMAIL_USERNAME,
+    pass: process.env.FC_EMAIL_PASSWORD
   }
 });
 
