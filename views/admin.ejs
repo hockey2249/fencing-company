@@ -1,10 +1,40 @@
-<%- include('base-header') %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fence Company</title>
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+  <script src="https://use.fontawesome.com/b3d4dba44a.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">  
+  <link href="css/navbar-fixed-side.css" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  
+</head>
+<body class="admin-background">
 
 <div>
-	<h1>We're Loged In</h1>
+	<h1>Welcome Roman</h1>
 </div>	
-<div class="container">
+
+<div class="container-fluid navbar-left">
   <div class="row">
+    <div class="col-sm-3 col-lg-2">
+      <nav class="navbar navbar-default navbar-fixed-side">
+        <ul>
+          <li class="top-link"><a class="navbar-admin-links" href="/">Website</a></li>
+          <li><a class="navbar-admin-links" href="/reviews">Reviews</a></li>
+        </ul>
+      
+      </nav>
+    </div>
+    <div class="col-sm-9 col-lg-10">
+
+    </div>
+  </div>
+</div>
+
+
+<div class="row leads-reviews">
     <div class="col-md-6 list-group">
       <h2>Reviews</h2>
       <% reviews.forEach((review) => { %>
@@ -38,8 +68,8 @@
         <% }) %>
       </div>
     <% } %>
-  </div> 
-</div>
+</div> 
+
 
 
 

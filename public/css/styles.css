@@ -1,3 +1,47 @@
+/** ADMIN stylying **/
+
+.lead-post{
+  margin: 15px;
+}
+.review-post{
+  margin: 15px;
+}
+
+.admin-background{
+  background-color: rgb(211,211,211);
+}
+.leads-reviews{
+  margin-left: 317px;
+
+}
+.navbar-left{
+  margin: 15px;
+}
+.navbar-admin-links{
+  font-size: 20px;
+  background-color: #f8f8f8;
+  margin-top: 15px;
+
+}
+.top-link{
+  margin-top: 15px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 ul:hover li {
     text-shadow: 0px 0px 3px black;
     color: transparent;
@@ -16,10 +60,7 @@ footer{
   height: 30em;
 }
 
-.row{
-  margin-right: 15px;
-  margin-left: 15px;
-}
+
 .reviews-style{
   margin-top: 150px;
 }
