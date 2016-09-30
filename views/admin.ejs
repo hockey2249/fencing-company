@@ -23,18 +23,21 @@
       <% }) %>
     </div>
     
-    <div class="col-md-6 list-group">
-      <h2>Leads</h2>
-      <% leads.forEach((lead) => { %>
-        <div class="lead-post list-group-item">
-          <p class="list-group-item-text">Author: <%= lead.firstName %> <%= lead.lastName %></p>
-          <p class="list-group-item-text"><%= lead.email %></p>
-          <p class="list-group-item-text"><%= lead.phone %></p>
-<!--           <p class="list-group-item-text"><%= lead.date %></p>
-          <p class="list-group-item-text"><%= lead.approved %></p> -->
-        </div>
-      <% }) %>
-    </div>
+    <% if (leads){ %>
+      <div class="col-md-6 list-group">
+        <h2>Leads</h2>
+        <% leads.forEach((lead) => { %>
+          <div class="lead-post list-group-item">
+            <p class="list-group-item-text">Author: <%= lead.firstName %> <%= lead.lastName %></p>
+            <p class="list-group-item-text"><%= lead.email %></p>
+            <p class="list-group-item-text"><%= lead.phone %></p>
+            <p class="list-group-item-text"><%= lead.repair %></p>
+            <p class="list-group-item-text"><%= lead.fenceType %></p>
+            <p class="list-group-item-text"><%= lead.dateCompleted %></p>
+          </div>
+        <% }) %>
+      </div>
+    <% } %>
   </div> 
 </div>
 

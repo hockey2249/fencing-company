@@ -90,6 +90,9 @@ app.post('/new-lead', (req, res) => {
 		    subject: newLead.firstName + ' ' + newLead.lastName,
         	firstName: newLead.firstName,
 		    lastName: newLead.lastName,
+		    repair: newLead.repair,
+		    fenceType: newLead.fenceType,
+		    dateCompleted: newLead.dateCompleted,
 		    hear: newLead.hear,
 		    phone: newLead.phone,
 		    email: newLead.email
@@ -155,7 +158,8 @@ app.get('/admin/approved', (req, res) => {
     		return review.approved;
     	});
     	return res.render('admin', {
-    		reviews: approvedReviews
+    		reviews: approvedReviews,
+    		leads: null
     	});
 	});
 });
