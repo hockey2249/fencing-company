@@ -1,3 +1,13 @@
+ul:hover li {
+    text-shadow: 0px 0px 3px black;
+    color: transparent;
+}
+
+ul:hover li:hover {
+    text-shadow: none;
+    color: black;
+}
+
 .fa-star{
   color: yellow;
 }
