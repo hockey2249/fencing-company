@@ -71,11 +71,12 @@ ul:hover li:hover {
 .contact-us{
   margin-top: 250px; 
 }
+
 .login{
   margin-top: 234px;
   margin-bottom: 400px;
 }
-}
+
 /**********
  * Boxes
  **********/
@@ -112,10 +113,11 @@ ul:hover li:hover {
     position: relative;
     background-color: rgb(204,129,65);
     color: #FFFFFF;
-    height: 40em;
+    min-height: 32em;
 }
 .footer-center-divs {
-    padding-top: 45px;
+ 
+    margin-left: 15px;
 }
 .form-footer {
     margin-top: 20px;
