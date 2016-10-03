@@ -58,11 +58,6 @@ ul:hover li:hover {
   color: yellow;
 }
 
-footer{
-  height: 30em;
-}
-
-
 .reviews-style{
   margin-top: 150px;
 }
@@ -106,12 +101,27 @@ footer{
  * Footer *
  **********/
 
-footer{
-  margin-top: 30px;
-  background-color: rgb(204,129,65);
+.bottom-footer {
+    background-color: white;
+    padding-top: 25px;
+    color: black;
+    height: 70px;
+    text-align: center;
 }
-
-
+.main-footer {
+    position: relative;
+    background-color: rgb(204,129,65);
+    color: #FFFFFF;
+    height: 40em;
+}
+.footer-center-divs {
+    padding-top: 45px;
+}
+.form-footer {
+    margin-top: 20px;
+    border-right: solid white;
+    border-left: solid white;
+}
 /**********
  * Slide Show *
  **********/
