@@ -94,6 +94,13 @@ body{
   margin-top: 234px;
   margin-bottom: 400px;
 }
+#login-form{
+  text-align: center;
+}
+.login-form-styling{
+  border: 1px black solid;
+  padding: 107px;
+}
 
 /**********
  * Boxes
