@@ -65,6 +65,11 @@ app.get('/', (req, res) => {
 
 });
 
+app.get('/about-us', (req, res) => {
+	res.render('about-us');
+
+});
+
 app.get('/api/leads', (req, res) =>{
 	db.Lead.find((err, leads) =>{
 		if (err){
