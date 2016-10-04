@@ -4,8 +4,8 @@
 
 
 <div class="row reviews-style">
-<h1>Reviews</h1>
-  <div class="col-md-3">
+  <div class="col-md-3" id="review-styling">
+    <h1>Reviews</h1>
     <form action="/reviews" method="post">
       <h4>Review Us Today!</h4>
       <div class="form-group">
@@ -35,7 +35,7 @@
       </div>
     </form>
   </div>
-  <div class="col-md-8 list-group">
+  <div class="col-md-8 list-group" id="review-styling">
     <% reviews.forEach((review) => { %>
     <% include ./partials/review %>
     <% }) %>
