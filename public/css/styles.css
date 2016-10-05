@@ -113,6 +113,8 @@ body{
 .login{
   margin-top: 234px;
   margin-bottom: 400px;
+  height: 2em;
+
 }
 #login-form{
   text-align: center;

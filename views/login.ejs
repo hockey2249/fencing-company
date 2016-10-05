@@ -1,24 +1,28 @@
-<%- include('base-header') %>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fence Company</title>
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+	<script src="https://use.fontawesome.com/b3d4dba44a.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/admin-styles.css">	
+	<link rel="stylesheet" type="text/css" href="/css/styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+	<link href="/css/hover-min.css" rel="stylesheet">
+</head>
+<body>
 <%- include('navbar') %>
 
 <div class="login">
-	<section>
-		<form action="/login" id="login-form" method="post">
-		  <div class="container login-form-styling">
-			  <div>
-			      <label>Username:</label>
-			      <input type="text" class="username_style" id="username-field" name="username"/>
-			  </div>
-			  <div>
-			      <label>Password:</label>
-			      <input type="password" class="password_style" id="password-field" name="password"/>
-			  </div>
-			  <div>
-			  	<button type="submit">Login</button>
-			  </div>
-		  </div>
-		</form>	
-	</section>	
+	<div class='form animated bounceIn'>
+	  <h2>Login To Your Account</h2>
+		  <form action="/login" id="login-form" method="post">
+		    <input type="text" class="username_style" id="username-field" name="username"/>
+		    <input type="password" class="password_style" id="password-field" name="password"/>
+		    <button type="submit" class='animated infinite pulse'>Login</button>
+		  </form>
+	</div>
 </div>
 
 <%- include('base-footer') %>
