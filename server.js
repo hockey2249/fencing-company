@@ -236,6 +236,10 @@ app.get('/cedar-fences-denver', (req, res) => {
 	res.render('cedar-fences-denver');
 });
 
+app.get('/rail-fence-denver', (req, res) => {
+	res.render('rail-fence-denver');
+});
+
 /**********
  * SERVER *
  **********/
