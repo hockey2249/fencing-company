@@ -240,6 +240,24 @@ app.get('/rail-fence-denver', (req, res) => {
 	res.render('rail-fence-denver');
 });
 
+app.get('/vynyl-fence-denver', (req, res) => {
+	res.render('vynyl-fence-denver');
+});
+
+app.get('/iron-fence-denver', (req, res) => {
+	res.render('iron-fence-denver');
+});
+
+app.get('/chain-link-fence-denver', (req, res) => {
+	res.render('chain-link-fence-denver');
+});
+
+app.get('/gates-denver', (req, res) => {
+	res.render('gates-denver');
+});
+
+
+
 /**********
  * SERVER *
  **********/
