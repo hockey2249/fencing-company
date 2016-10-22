@@ -229,6 +229,14 @@ app.get('/contact-us', (req, res) => {
 });
 
 /**********
+ * ROUTES Fence Pages *
+ **********/
+
+app.get('/cedar-fences-denver', (req, res) => {
+	res.render('cedar-fences-denver');
+});
+
+/**********
  * SERVER *
  **********/
 
