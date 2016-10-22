@@ -158,7 +158,7 @@ body{
 }
 .main-footer {
     position: relative;
-    background-color: rgb(204,129,65);
+    background-color: rgb(0, 0, 128);
     color: #FFFFFF;
     min-height: 32em;
 }
@@ -176,7 +176,7 @@ body{
  **********/
 
 #slideshow{
-  padding-top: 11em;
+  padding-top: 5em;
 }
 .carousel-inner img{
   width: 100%;
@@ -187,190 +187,39 @@ body{
 /**********
  * Navbar Custom *
  **********/
-
-#a-header{
-  font-size:20px;
-  text-align: center;
-}
-.img-header{
-  margin-top: 48px;
-}
-
-.left-header{
-margin-left: 105px;
-}
-.right-header{
-margin-left: 155px;  
-}
-.header-style{
-  background-color: rgba(204, 129, 65, 0.8);
-
-}
-.above-header{
+.active{
   background-color: white;
 }
+.navbar-inverse{
+  background-color: rgb(0, 0, 128);
 
-/* Mobile and Tablet */
-@media (max-width: 992px) {
-  .navbar-header {
-    float: none;
-  }
-
-  .navbar-toggle {
-    display: block;
-  }
-
-  .navbar-collapse {
-    border-top: 1px solid transparent;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  }
-  .navbar-collapse.collapse {
-    display: none !important;
-  }
-
-  .navbar-nav {
-    float: none !important;
-    margin: 7.5px -15px;
-  }
-  .navbar-nav > li {
-    float: none;
-  }
-  .navbar-nav > li > a {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-  .navbar-text {
-    float: none;
-    margin: 15px 0;
-  }
-
-  /* since 3.1.0 */
-  .navbar-collapse.collapse.in {
-    display: block !important;
-  }
-
-  .collapsing {
-    overflow: hidden !important;
-  }
-
-  .navbar {
-    background: #F8F8F8;
-    border: none;
-    margin-bottom: 0;
-  }
-  .navbar .container {
-    width: 100%;
-  }
-  .navbar-header {
-    height: 75px;
-  }
-  .navbar-header .navbar-toggle {
-    right: 0;
-    border: none;
-    background: transparent !important;
-    margin-top: 18px;
-  }
-  .navbar-header .navbar-toggle:hover {
-    background: transparent !important;
-  }
-  .navbar-header .navbar-toggle .icon-bar {
-    width: 22px;
-    transition: all 0.2s;
-  }
-  .navbar-header .navbar-toggle .top-bar {
-    transform: rotate(45deg);
-    transform-origin: 10% 10%;
-  }
-  .navbar-header .navbar-toggle .middle-bar {
-    opacity: 0;
-  }
-  .navbar-header .navbar-toggle .bottom-bar {
-    transform: rotate(-45deg);
-    transform-origin: 10% 90%;
-  }
-  .navbar-header .navbar-toggle.collapsed .top-bar {
-    transform: rotate(0);
-  }
-  .navbar-header .navbar-toggle.collapsed .middle-bar {
-    opacity: 1;
-  }
-  .navbar-header .navbar-toggle.collapsed .bottom-bar {
-    transform: rotate(0);
-  }
-  .navbar-brand {
-    padding: 12px 0 0;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    margin-left: -100px !important;
-    /* 50% of your logo width */
-    display: block;
-    z-index: 9999;
-  }
-  .navbar-brand img {
-    width: 200px;
-  }
-  .navbar-nav li a {
-    color: #707070 !important;
-    font-size: 14px;
-  }
-  .navbar-nav li a:hover {
-    background: #ebebeb !important;
-    color: #BC7A84 !important;
-  }
 }
-/* laptop */
-@media (min-width: 993px) {
-  .navbar {
-    border: none;
-    margin-bottom: 0;
-  }
-  .navbar-brand {
-    padding: 10px 0 0;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    margin-left: -152.5px !important;
-    /* 50% of your logo width */
-    display: block;
-    z-index: 9999;
-  }
-  .navbar-brand img {
-    width: 305px;
-  }
-  .navbar-nav li a {
-    color: #707070 !important;
-    font-size: 14px;
-  }
-  .navbar-nav li a:hover {
-    color: #BC7A84 !important;
-  }
-  .navbar-right li a {
-    padding: 40px 0 40px 50px;
-  }
-  .navbar-left li a {
-    padding: 40px 50px 40px 0;
-  }
+nav .navbar-brand {
+  font-size: 30px;
 }
-/* Desktop */
-@media (min-width: 1200px) {
-  .navbar-brand {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    margin-left: -152.5px !important;
-    /* 50% of your logo width */
-    display: block;
-    z-index: 9999;
-  }
-  .navbar-brand img {
-    width: 305px;
-  }
-  .navbar-right li a {
-    padding: 40px 0 40px 90px;
-  }
-  .navbar-left li a {
-    padding: 40px 90px 40px 0;
-  }
+nav .navbar-toggle {
+  margin: 13px 15px 13px 0;
 }
+nav a {
+  font-size: 18px;
+  padding-bottom: 20px !important;
+  padding-top: 20px !important;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+nav.navbar.shrink {
+  min-height: 35px;
+}
+nav.navbar.shrink .navbar-brand {
+  font-size: 25px;
+}
+nav.navbar.shrink a {
+  font-size: 15px;
+  padding-bottom: 10px !important;
+  padding-top: 10px !important;
+}
+nav.navbar.shrink .navbar-toggle {
+  margin: 8px 15px 8px 0;
+  padding: 4px 5px;
+}
+
