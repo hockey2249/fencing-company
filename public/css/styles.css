@@ -2,6 +2,11 @@
   margin: 25px;
 }
 
+.contact-us-first{
+  margin-top: 125px;
+  margin-left: 105px;
+
+}
 
 .about-us-homepage{
   margin: 45px;
@@ -54,7 +59,17 @@ i{
   margin: 21px;
 }
 #review-styling{
-  margin: 30px;
+  margin: 45px;
+  background-color: rgba(0, 0, 128, .9);
+  padding: 37px;
+  color: white;
+}
+.review-post{
+  color: black;
+}
+#review-post-styling{
+  background-color: rgba(0, 0, 128, .9);
+  color: black;
 }
 
 .hvr-fade {
@@ -88,7 +103,7 @@ i{
 }
 
 .admin-background{
-  background-color: rgb(169,169,169);
+  background-color: rgb(246,246,246);
 }
 .leads-reviews{
   margin-left: 317px;
@@ -110,17 +125,32 @@ ul {
 }
 .navbar-styling{
   width: 22em;
+  background-color: #4d394b;
 }
 .ul-style-admin{
   margin-top: 45px;
 }
 
+.admin-bullets{
+  list-style-type: none;
 
+}
+.a-admin-tags{
+  color: white;
+}
+.li-admin-tags{
+  margin: 30px;
+}
 body{
   font-family: 'Playfair Display', serif;
+  background-color: rgb(246,246,246);
 
 }
 
+.fa{
+  color: white;
+
+}
 
 
 
@@ -139,7 +169,7 @@ body{
 }
 
 .contact-us{
-  margin-top: 125px;
+  margin-top: 25px;
 }
 
 .login{
@@ -202,7 +232,7 @@ body{
   background-color: white;
 }
 .navbar-inverse{
-  background-color: rgba(0, 0, 128, .7);
+  background-color: rgba(0, 0, 128, .9);
   height: 5em;
 
 }
