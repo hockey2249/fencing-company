@@ -1,6 +1,12 @@
 .footer-logo{
   margin: 25px;
 }
+#footer-li-tags-top{
+  margin-left: 15px;
+}
+#footer-li-tags{
+  margin-left: 15px; 
+}
 
 .contact-us-first{
   margin-top: 125px;
