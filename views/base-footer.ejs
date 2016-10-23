@@ -6,6 +6,7 @@
 
     <div class="row">
       <div class="footer-center-divs col-sm-6 col-md-4">
+        <a href="/"><img class="img-responsive footer-logo" src="../../images/fence-logo.png"></a>
         <div class="location-footer">
           <h5>Headquarters: Denver, CO</h5>
           <h5>Phone Number: (720) 507-6758</h5>
@@ -23,15 +24,15 @@
   </div>
   <div class="footer-center-divs">
     <div class="col-sm-6 col-md-4 form-footer" action=" " method="post">
-        <form>
+        <form action="/new-lead" method="post">
           <h3>Get a Free Estimate!</h3>
           <div class="form-group">
             <label for="control-label">First Name</label>
-            <input name="first_name" id="firstName" placeholder="First Name" class="form-control" type="text">
+            <input name="firstName" id="firstName" placeholder="First Name" class="form-control" type="text">
           </div>
           <div class="form-group">
             <label for="formGroupExampleInput2">Last Name</label>
-            <input name="last_name" id="lastName" placeholder="Last Name" class="form-control" type="text">
+            <input name="lastName" id="lastName" placeholder="Last Name" class="form-control" type="text">
           </div>
           <div class="form-group">
             <label for="formGroupExampleInput">Email Address</label>
@@ -39,7 +40,7 @@
           </div>
           <div class="form-group">
             <label for="formGroupExampleInput2">Phone Number</label>
-            <input type="text" class="form-control" id="phoneNumberInput" placeholder="Phone Number">
+            <input name="phone" type="text" class="form-control" id="phoneNumberInput" placeholder="Phone Number">
             <br>
            <div class="col-md-4 button-form">
             <button type="submit" id="contactSubmit" class="btn btn-warning">Send <span class="glyphicon glyphicon-send"></span></button>

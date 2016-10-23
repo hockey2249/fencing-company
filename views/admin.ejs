@@ -18,7 +18,6 @@
       <nav class="navbar-styling navbar navbar-default navbar-fixed-side">
         <i class="fa fa-tachometer" aria-hidden="true">Dashboard</i>
         <ul class="ul-style-admin">
-          <li><a class="navbar-admin-links" href="/reviews">Reviews</a></li>
           <a class="navbar-admin-links" href="/">Website</a>
         </ul>
       
@@ -44,7 +43,8 @@
           <% if(review.approved){ %>
             <a href="/unapprove-reviews/<%= review._id %>" class="approve-button">Unapprove</a>
           <% } else{ %>
-            <a href="/approve-reviews/<%= review._id %>" class="approve-button">Approve</a>
+            <a href="/approve-reviews/<%= review._id %>" class="approve-button"><button type="button" class="btn btn-success">Approve</button></a>
+            <a href="/delete-reviews/<%= review._id %>" class="approve-button"><button type="button" class="btn btn-danger">Decline</button></a>
           <% } %>
          </div>
       <% }) %>
@@ -55,12 +55,12 @@
         <h2>Leads</h2>
         <% leads.forEach((lead) => { %>
           <div class="lead-post list-group-item">
-            <p class="list-group-item-text">Author: <%= lead.firstName %> <%= lead.lastName %></p>
-            <p class="list-group-item-text"><%= lead.email %></p>
-            <p class="list-group-item-text"><%= lead.phone %></p>
-            <p class="list-group-item-text"><%= lead.repair %></p>
-            <p class="list-group-item-text"><%= lead.fenceType %></p>
-            <p class="list-group-item-text"><%= lead.dateCompleted %></p>
+            <p class="list-group-item-text">First/Last Name:<%= lead.firstName %> <%= lead.lastName %></p>
+            <p class="list-group-item-text">Email:<%= lead.email %></p>
+            <p class="list-group-item-text">Phone:<%= lead.phone %></p>
+            <p class="list-group-item-text">Repair:<%= lead.repair %></p>
+            <p class="list-group-item-text">Fence Type:<%= lead.fenceType %></p>
+            <p class="list-group-item-text">Date Completed:<%= lead.dateCompleted %></p>
           </div>
         <% }) %>
       </div>

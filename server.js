@@ -211,6 +211,16 @@ app.get('/approve-reviews/:id', function(req, res){
 	});
 });	
 
+app.delete('/delete-reviews/:id', function (req, res){  
+    ensureAuthenticated(req, res, function(){
+ 		db.Reviews.remove({ _id: req.params.user_id}, { approved: false }, (err, user) => {
+            if (err) {
+            	return res.send(err);
+            }
+            res.json({ message: 'Deleted' });
+        });
+    });
+});	
 
 app.get('/unapprove-reviews/:id', function(req, res){
 	ensureAuthenticated(req, res, function(){
