@@ -234,14 +234,39 @@ body{
 /**********
  * Navbar Custom *
  **********/
+
+ .nav-link{
+  transition: all 250ms;
+}
+
+.nav-link:hover{
+  background-color: white !important;
+  opacity: 0.7;
+  color: black !important;
+}
+.nav-link:hover a{
+  background-color: white !important;
+  opacity: 0.7;
+  color: black !important;
+}
+
+
 .active{
   background-color: white;
 }
 .navbar-inverse{
   background-color: rgba(0, 0, 128, .9);
   height: 5em;
-
 }
+
+.navbar-inverse li{
+  height: 5em;
+}
+
+.navbar-inverse.shrink li{
+  height: 54px;
+}
+
 nav .navbar-brand {
   font-size: 30px;
 }
