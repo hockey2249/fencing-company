@@ -266,6 +266,10 @@ app.get('/gates-denver', (req, res) => {
 	res.render('gates-denver');
 });
 
+app.get('/projects-completed', (req, res) => {
+	res.render('projects-completed');
+});
+
 
 
 /**********
