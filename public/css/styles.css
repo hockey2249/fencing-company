@@ -243,12 +243,12 @@ body{
  **********/
 
  .nav-link{
-  transition: all 250ms;
+  transition: all 25ms;
 }
 
 .nav-link:hover{
   background-color: white !important;
-  opacity: 0.7;
+
   color: black !important;
 }
 .nav-link:hover a{
