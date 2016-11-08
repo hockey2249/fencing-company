@@ -270,6 +270,11 @@ app.get('/projects-completed', (req, res) => {
 	res.render('projects-completed');
 });
 
+app.get('/partners', (req, res) => {
+	res.render('partners');
+});
+
+
 
 
 /**********
