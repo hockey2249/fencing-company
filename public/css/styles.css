@@ -241,6 +241,9 @@ body{
 /**********
  * Navbar Custom *
  **********/
+.navbar-collapse{
+  background-color: #2B3990;
+}
 
  .nav-link{
   transition: all 25ms;
@@ -422,5 +425,18 @@ nav.navbar.shrink .navbar-toggle {
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
 }
+
+@media (max-width: 600px) { 
+    .mobile-logo{
+          height: 50px;
+          width: 50px;
+          margin-top: -10px;
+          margin-left: 39px;
+    }
+
+
+}
+
+
 
 
