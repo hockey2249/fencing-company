@@ -1,13 +1,13 @@
 <%- include('base-header') %>
 <%- include('navbar') %>
 
-<div class='row contact-us-first'>
+<div class='row contact-us-first first-div-style'>
     <div class='lg-md-3'>
       <h2>Contact Us!</h2>
         <p>Our group of hard-at-work fence specialists are here to answer any questions you may have about future projects, or even if you're looking to get started right away.</p>
         <p>We would love to hear from you. Reach out, and we will respond as soon as we can.</p>
-        <p>Phone : +1 xxx-xxx-xxxx</p>
-        <p>Email : xxx@xxxxxxxx.com</p>
+        <p>Phone : +1 (970)-946-7091</p>
+        <p>Email : romanlefevre5280@gmail.com</p>
     </div>  
 </div>      
 
@@ -26,14 +26,18 @@
             <input name="lastName" id="lastName" placeholder="Last Name" class="form-control"  type="text">
           </div>
           <div class="form-group">
+            <label for="formGroupExampleInput2">Phone Number</label>
+            <input name="phone" type="text" class="form-control" id="phoneNumberInput" placeholder="Phone Number">
+          <div class="form-group">
             <label for="formGroupExampleInput">Email Address</label>
             <input name="email" id="email" placeholder="E-Mail Address" class="form-control"  type="text">
           </div>
           <div class="form-group">
-            <label for="repair">Repair Type</label>
+            <label for="repair">Nature of your project</label>
             <select name="repair" id="repair" class="form-control"  type="text">
-                <option value="replacementFence">Replacement Fence</option> 
-                <option value="newFence">New Fence</option>   
+                <option value="newFence">New Fence</option>  
+                <option value="replacementFence">Fence Replacement</option> 
+                <option value="newFence">Fence Repair</option>  
             </select>
           </div>
           <div class="form-group">
@@ -41,7 +45,8 @@
             <select name="fenceType" id="fenceType" class="form-control"  type="text">
                 <option value="wood">Wood</option> 
                 <option value="vinyl">Vinyl</option> 
-                <option value="chainLink">Chain Link</option>    
+                <option value="chainLink">Chain Link</option>   
+                <option value="chainLink">Other</option>   
             </select>
           </div>
           <div class="form-group">
@@ -52,9 +57,6 @@
             <label for="formGroupExampleInput2">How did you hear about us?</label>
             <input name="hear" id="hear" placeholder="Hear About Us" class="form-control"  type="text">
           </div>
-          <div class="form-group">
-            <label for="formGroupExampleInput2">Phone Number</label>
-            <input name="phone" type="text" class="form-control" id="phoneNumberInput" placeholder="Phone Number">
             <br>
            <div class="col-md-4 button-form">
             <button type="submit" id="contactSubmit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
@@ -65,7 +67,5 @@
     </div>
   </div>
 </div>
-
-
 
 <%- include('base-footer') %>

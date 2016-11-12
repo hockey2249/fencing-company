@@ -290,12 +290,12 @@ app.get('/contact-us', (req, res) => {
  * ROUTES Fence Pages *
  **********/
 
-app.get('/cedar-fences-denver', (req, res) => {
-	res.render('cedar-fences-denver');
+app.get('/wood-fences-denver', (req, res) => {
+	res.render('wood-fences-denver');
 });
 
-app.get('/rail-fence-denver', (req, res) => {
-	res.render('rail-fence-denver');
+app.get('/split-rail-fence-denver', (req, res) => {
+	res.render('split-rail-fence-denver');
 });
 
 app.get('/vynyl-fence-denver', (req, res) => {

@@ -1,3 +1,22 @@
+.first-div-style{
+  font-size: 16px;
+}
+
+.wood-paragraph{
+  margin: 20px;
+}
+.rail-paragraph{
+  margin: 20px;
+
+}
+.second-div-style{
+  font-size: 16px;
+}
+
+#nav-color{
+  color: white;
+}
+
 select{
   color: black;
 }
