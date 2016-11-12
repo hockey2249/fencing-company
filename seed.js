@@ -2,7 +2,7 @@ var db = require('./models');
 
 var user = 
   {
-    username: 'kyle',
+    username: 'roman',
     password: 'hello123',
   };
 
