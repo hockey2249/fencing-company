@@ -298,8 +298,8 @@ app.get('/split-rail-fence-denver', (req, res) => {
 	res.render('split-rail-fence-denver');
 });
 
-app.get('/vynyl-fence-denver', (req, res) => {
-	res.render('vynyl-fence-denver');
+app.get('/vinyl-fence-denver', (req, res) => {
+	res.render('vinyl-fence-denver');
 });
 
 app.get('/iron-fence-denver', (req, res) => {
