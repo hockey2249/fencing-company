@@ -24,7 +24,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 mailer.extend(app, {
-  from: 'roman@denverfencespecialists.com',
+  from: 'highermarkets@gmail.com',
   host: 'smtp.gmail.com',
   secureConnection: true, 
   port: 465, 
