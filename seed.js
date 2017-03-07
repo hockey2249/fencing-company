@@ -3,7 +3,7 @@ var db = require('./models');
 var user = 
   {
     username: 'roman',
-    password: 'hello123',
+    password: 'hello',
   };
 
 db.User.remove({}, function(err, users){
